@@ -31,6 +31,7 @@ body {
     height: 60px;
     padding: 10px 16px;
     background-color: #ededed;
+    border-right: solid 1px rgb(0, 0, 0, 0.08);
 }
 
 .auxicons-toolbar-container i {
@@ -173,6 +174,7 @@ main nav ul {
     align-items: center;
     justify-content: center;
     background: #fff;
+    z-index: 2;
 }
 
 .sendmessage-container input {
@@ -247,18 +249,29 @@ main nav ul {
     font-size: 17px;
 }
 
-div.messages-container {
+.messages-container {
     position: relative;
-    padding: 25px;
+    padding-right: 8%;
+    padding-left: 8%;
+    max-height: 860px;
+    overflow: scroll;
+    z-index: 1;
+}
+
+.messages-container::-webkit-scrollbar {
+    display: none;
 }
 
 div.messages-container .chat-messages {
     padding: 6px 7px 8px 9px;
-    width: 20%;
-    height: 33px;
+    width: max-content;
+    height: auto;
     background: #fff;
     margin: 12px;
-    border-radius: 100px;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 div.messages-container .chat-messages::before {
@@ -270,13 +283,14 @@ div.messages-container .chat-messages::before {
     border-left: 40px solid #fff;
     border-bottom: 15px solid transparent;
     margin: 9px;
-    transform: translate(-70%, -50%) rotate(189deg);
+    transform: translate(-95%, -10%) rotate( 189deg);
 }
 
 div.messages-container .chat-messages p {
     margin: 0;
-    width: 100%;
     text-align: center;
+    z-index: 10;
+    max-width: 800px;
 }
 
 .another-user {
@@ -291,15 +305,15 @@ div.messages-container .chat-messages p {
 
 .another-user .chat-messages::before {
     content: '';
-    position: absolute;
+    position: absolute !important;
     width: 0;
     height: 0;
     right: 0;
     border-top: 15px solid transparent !important;
-    border-left: 40px solid #dcf8c6 !important;
+    border-left: 20px solid #dcf8c6 !important;
     border-bottom: 15px solid transparent !important;
     margin: 9px;
-    transform: translate(-56%, -60%) rotate(220deg) !important;
+    transform: translate(-415%, -30%) rotate(220deg) !important;
 }
 
 .fa-check-double {
