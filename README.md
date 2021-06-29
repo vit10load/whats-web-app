@@ -12,3 +12,5 @@ CSS3 is the third newest version of the famous Cascading Style Sheets (or simply
 which defines styles for a web project (webpage)
 
 ### FRONT EXAMPLE
+
+![clone-front](https://user-images.githubusercontent.com/26008720/123809987-0f7b6e80-d8c0-11eb-94b9-99dbf4feab68.png)
