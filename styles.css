@@ -1,0 +1,309 @@
+/****
+    EXAMPLE SIMPLE PAGE FOR WHATZAP WEB
+    DEVELOPED BY VITOR OLIVEIRA DA SILVA
+****/
+
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
+html,
+body {
+    width: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: 0;
+    height: 1000px;
+}
+
+.container .sidebar {
+    flex-direction: column;
+    background: #fff;
+    width: 391px;
+}
+
+.container .sidebar .toolbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 10px 16px;
+    background-color: #ededed;
+}
+
+.auxicons-toolbar-container i {
+    margin-left: 10px;
+    padding: 8px;
+}
+
+.fa-bell-slash:before {
+    content: "\f1f6";
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    padding: 12px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 100%;
+    margin-top: -1;
+    padding: 0 15px 0 13px;
+}
+
+.user-photo {
+    border-radius: 100% !important;
+    margin: 0 !important;
+}
+
+.notification-container {
+    padding: 13px 12px 14px 13px;
+    background: #9de1fe;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    min-height: 62px;
+}
+
+.notification-container i.fa-bell-slash {
+    width: 45px;
+    height: 45px;
+    border: solid #fff 1px;
+    border-radius: 100%;
+    background-color: #fff;
+    color: #9de1fe;
+}
+
+.notification-container .side {
+    margin-left: 30px;
+}
+
+.notification-container .side p.receive-notification {
+    font-size: 17px;
+    line-height: 21px;
+    color: rgb(48, 48, 48);
+    margin: 0;
+}
+
+.notification-container .side p.activate-notification {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgb(48, 48, 48);
+    margin: 0;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.search-container i {
+    color: #919191;
+    margin-left: 18px;
+}
+
+.search-container input {
+    right: 14px;
+    left: 12px;
+    padding-left: 65px;
+    border-radius: 18px;
+    background: #fff;
+    border: none;
+    font-size: 15px;
+    min-height: 20px;
+    line-height: 20px;
+    height: 35px;
+    width: 300px;
+    transition: .5s ease-in-out;
+}
+
+@keyframes animation-size {
+    0% {
+        height: 55px;
+    }
+    100% {
+        height: 70px;
+    }
+}
+
+.search-container input:focus {
+    outline: none;
+    animation: 0.8s linear animation-size;
+    animation-fill-mode: forwards;
+}
+
+main {
+    width: 100%;
+    background-image: url(./img/background_whats.png);
+    position: relative;
+}
+
+.chat-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    height: 60px;
+    background: #ededed;
+}
+
+main nav .contactinfo-container {
+    display: flex;
+}
+
+main nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.chat-navbar ul>li {
+    padding: 8px;
+}
+
+.sendmessage-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.sendmessage-container input {
+    padding: 9px 12px 11px;
+    margin: 5px 10px;
+    width: 80%;
+    height: 42px;
+    border: none;
+}
+
+.sendmessage-container input:focus {
+    outline: none;
+}
+
+.contacts-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    background: #fff;
+    scroll-snap-type: y proximity;
+    max-height: 110vh;
+    overflow-y: scroll;
+}
+
+.contacts-container::-webkit-scrollbar {
+    display: none;
+}
+
+.contacts-container .contact-box {
+    background: #fff;
+    pointer-events: all;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    align-items: center;
+    position: relative;
+}
+
+.contacts-container .contact-box .user-info {
+    width: 70%;
+}
+
+.contacts-container .contact-box span {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border: solid 2px #25d366;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+    background: #25d366;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-box .message-info {
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    padding: 8px;
+}
+
+.user-info .user-messagepreview {
+    font-size: 14px;
+}
+
+.user-info .user-name {
+    font-size: 17px;
+}
+
+div.messages-container {
+    position: relative;
+    padding: 25px;
+}
+
+div.messages-container .chat-messages {
+    padding: 6px 7px 8px 9px;
+    width: 20%;
+    height: 33px;
+    background: #fff;
+    margin: 12px;
+    border-radius: 100px;
+}
+
+div.messages-container .chat-messages::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 40px solid #fff;
+    border-bottom: 15px solid transparent;
+    margin: 9px;
+    transform: translate(-70%, -50%) rotate(189deg);
+}
+
+div.messages-container .chat-messages p {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.another-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.another-user .chat-messages {
+    background-color: #dcf8c6 !important;
+}
+
+.another-user .chat-messages::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    border-top: 15px solid transparent !important;
+    border-left: 40px solid #dcf8c6 !important;
+    border-bottom: 15px solid transparent !important;
+    margin: 9px;
+    transform: translate(-56%, -60%) rotate(220deg) !important;
+}
+
+.fa-check-double {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #34b7f1;
+}
